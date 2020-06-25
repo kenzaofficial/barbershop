@@ -66,7 +66,7 @@ li {
   display: flex;
   justify-content: flex-end;
   padding: 25px 20px;
-  color: white;
+  color: #222;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
@@ -103,7 +103,7 @@ li {
 .features-item-title::before {
   position: absolute;
   content: "";
-  background-color: white;
+  background-color: #fff;
   width: 15px;
   height: 15px;
   transform: rotate(45deg);
@@ -126,6 +126,7 @@ li {
   color: black;
   background-image: url(../images/index-background.png);
   background-position: center;
+  color: #fff;
 }
 
 .index-content-left {
@@ -293,8 +294,7 @@ input::-webkit-input-placeholder {
 }
 
 .footer-copyright {
-  width: 140px;
-  border: 1px solid red;
+  width: 540px;
 }
 
 .footer-copyright:last-child {
