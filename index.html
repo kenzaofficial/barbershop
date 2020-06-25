@@ -3,41 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>barbershop </title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Barbershop</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="main-header">
         <div class="container">
-            <div class="header-right">
-                <a href="#" class="logo">
-                    <img src="./assets/images/logo.png">
-                </a>
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="#">ИНФОРМАЦИЯ</a></li>
-                        <li><a href="#">НОВОСТИ</a></li>
-                        <li><a href="#">ПРАЙС-ЛИСТ</a></li>
-                        <li><a href="#" class="active">МАГАЗИН</a></li>
-                        <li><a href="#">КОНТАКТЫ</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <button class="button" type="button">ВХОД</button>
-        </div>
+            <nav class="main-navigation">
+                <ul class="main_ul">
+                    <li><a href="#">Информация</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Прайст-лист</a></li>
+                    <li><a href="#">Магазин</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>  
+<!--END main-navigation-->
+            <button class="login" type="button">                
+                Вход
+            </button>   
+        </div> 
     </header>
-    <main class="main">
-        <div class="container">
-            <h1 class="title">главный заголовок страницы</h1>
-            <ul class="breadcrubms">
-                <li><a href="#">Магазин</a></li>
-                <li><a href="#" class="active">Средства для ухода</a></li>
-        </ul>
+<!--END main-header-->
+<main class="container">
+    <div class="index-logo">
+        <img src="./images/BORODINSKI_Logo.png" alt="Барбершоп «Бородинский»"  width="368" height="204">
+    </div>
+<section class="features">  
+        <div class="feature-item"><b class="features-item-title">Быстро</b>
+            <p class="features-item-text">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки!</p>
         </div>
-        
-    <div class="marker">   
-    </div> 
-    </main>
+        <div class="feature-item"><b class="features-item-title">Круто</b>
+            <p class="features-item-text">Забудьте, как вы стриглись раньше.Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне!</p> 
+        </div>
+        <div class="feature-item"><b class="features-item-title">Дорого</b>
+            <p class="features-item-text">Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
+        </div>  
+</section>
+<!--END features-->
+<!--START Index-content-->
+<div class="index-content">
+    <div class="index-content-left">
+        <h2 class="index-title">Новости</h2>       
+        <ul class="news-preview">
+            <li>
+        <p class="index-p">НАМ НАКОНЕЦ ЗАВЕЗЛИ ЕГЕРМЕЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
+        <time class="list-time" datetime="2020-01-11">11 января</time>
+            </li>
+            <li><p class="index-p">В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДЕТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
+        <time class="list-time" datetime="2020-01-18">18 января</time>
+            </li>
+        </ul>
+        <a class="btn" href="#">Все новости</a>    
+    </div>
+    <div class="index-content-right">
+        <h2 class="index-title">Фотогалерея</h2>
+        <div class="gallery-content">
+            <img class="slide-img" src="./images/photo1.jpg" width="286" height="164" alt="interier">
+        </div>
+        <div class="two-buttons">
+            <button class="btn gallery-prev" type="button">Назад</button>
+            <button class="btn gallery-next" type="button">Вперед</button>
+        </div>               
+    </div>
+</div>
+<!--END index-content-->
+<!--START index-content копируем предыдущий блок-->
+<div class="index-content">
+    <div class="index-content-left">
+        <h2 class="index-title">Контактная информация</h2>
+        <p class="index-p index-p-contact">БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+            АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
+            ТЕЛЕФОН: +7 (495) 666-02-66</p>
+            <p class="index-p index-p-schedule">ВРЕМЯ РАБОТЫ:<br> 
+                ПН — ПТ: С 10:00 ДО 22:00<br>
+                СБ — ВС: С 10:00 ДО 19:00</p>
+            <div class="two-buttons"> 
+                <a class="btn" href="#">Как проехать</a>
+                <a class="btn" href="#">Обратная связь</a>
+            </div>   
+    </div>
+    <div class="index-content-right">
+        <h2 class="index-title">Записаться</h2>
+        <p class="index-p"> УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
+        <form class="registration" action="http://www.purescore.com/" method="POST">
+            <input class="btn" type="text" name="date" placeholder="дата">
+            <input class="btn" type="text" name="time" placeholder="время">
+            <input class="btn" type="text" name="name" placeholder="Ваше имя">
+            <input class="btn" type="tel" name="phone" placeholder="Телефон">
+            <button class="btn" type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+</main> 
+<!--END index-content (2)-->
+<footer class="main-footer">
+    <div class="container">
+        <section class="footer-contacts">
+            <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+                АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
+                <a class="footer-map-link" href="#">КАК НАС НАЙТИ?</a><br>
+                ТЕЛЕФОН: +38(098)5557205</p>
+        </section>
+        <section class="footer-social">
+            <p class="footer-title">Давайте дружить!</p>
+            <div class="social-buttons">
+                <a class="vk social-wrapper" href="https://vk.com/baronin_yaroslav">
+                    <img src="./images/vk-icon.png" alt="Vkontakte"></a>
+                <a class="fb social-wrapper" href="https://vk.com/public132719596">
+                    <img src="./images/fb-icon.png" alt="facebook"></a>
+                <a class="inst social-wrapper" href="https://www.instagram.com/baronin_yaroslav/">
+                    <img src="./images/inst-icon.png" alt="instagram"></a>
+            </div>
+        </section>
+        <section class="footer-copyright">
+            <p class="footer-title"> Разработано:</p>
+            <a class="btn" href="https://htmlacademy.ru/">htmlacademy.ru</a>
+        </section>
+    </div>
+</footer>
+
+  
+    
 </body>
 </html>
