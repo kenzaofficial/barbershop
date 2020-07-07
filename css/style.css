@@ -11,9 +11,19 @@ body {
   padding: 0;
   font-family: PTSansnarrow, sans-serif;
   color: white;
-  background-color: yellow;
+  background-color: black;
   background-image: url("../images/background.jpg");
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+.inner-page {
+  color: #000000;
+  background-image: url("../images/white-background.jpg");
+  background-repeat: repeat;
+}
+.inner-page a {
+  color: black;
 }
 
 button {
@@ -46,25 +56,50 @@ li {
 .main-header .container {
   display: flex;
   justify-content: space-between;
-  background-color: black;
   align-items: center;
 }
 
-.main-navigation .main_ul {
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.inner-logo {
+  padding: 15px 20px;
+}
+
+.main-navigation-ul {
   display: flex;
   width: 550px;
   margin: 0;
   text-transform: uppercase;
   font-size: 16px;
   justify-content: space-between;
-  padding: 0
+  padding: 0;
 }
 
-.main_ul a {
+.main-navigation-ul a {
   padding: 25px 20px;
+  display: inline-block;
 }
-.main-navigation a:hover {
-  background-color:#242424;
+.main-navigation-ul a:hover {
+  background-color: #242424;
+}
+.main-navigation-ul .active {
+  position: relative;
+}
+.main-navigation-ul .active a:hover {
+  background: none;
+}
+
+.main-navigation .active::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  right: 20px;
+  height: 5px;
+  bottom: 0;
+  background-color:white;
 }
 
 .login {
@@ -84,9 +119,15 @@ li {
 }
 
 .login:hover {
-  background-color:#242424;
+  background-color: #242424;
+  background-image: url(../images/icon-login-hover.png);
 }
 /*END .main-header*/
+/* внутренние стили start*/
+
+.inner-page-title {
+margin-bottom: 55px;
+}
 .index-logo {
   margin: 0 auto;
   width: 368px;
@@ -139,9 +180,9 @@ li {
   margin-bottom: 35px;
   padding: 55px 80px 50px;
   color: black;
-  background-color: #fff;
-  background-image: url(../images/index-shadow.png);
-  background-repeat: no-repeat;
+  background-color:white;
+  background-image: url(../images/index-shadow.png), url(../images/white-background.jpg);
+  background-repeat: no-repeat, repeat;
   background-position: center;
 }
 
@@ -253,7 +294,13 @@ input::-webkit-input-placeholder {
 
 .main-footer {
   width: 100%;
+  color: white;
   background-color: #222222;
+  background-image: url(../images/footer-background.png);
+}
+
+.main-footer a {
+  color: white;
 }
 
 .main-footer .container {
@@ -264,12 +311,10 @@ input::-webkit-input-placeholder {
   padding-bottom: 45px;
   width: 100%;
   max-width: 960px;
-  border: 1px solid red;
 }
 
 .footer-contacts {
   width: 400px;
-  border: 1px solid red;
 }
 
 .footer-created-by-text {
@@ -279,7 +324,6 @@ input::-webkit-input-placeholder {
 
 .footer-social {
   text-align: center;
-  border: 1px solid red;
 }
 
 .social-buttons-wrap {
@@ -300,7 +344,6 @@ input::-webkit-input-placeholder {
 .footer-copyright {
   margin-left: auto;
   text-align: center;
-  border: 1px solid red;
 }
 
 .footer-map-link {
@@ -312,4 +355,178 @@ input::-webkit-input-placeholder {
   color: red;
   transition: 0.4s;
   border-bottom: 1px solid yellow;
+}
+/* INDEX END -------------------------- */
+
+/* ПРАЙС-ЛИСТ START ------------------*/
+.inner-page .main-header {
+  margin-bottom: 55px;
+}
+.inner-page .main-header a {
+  color: white;
+}
+
+.inner-page-title {
+  text-transform: uppercase;
+}
+
+.price-list-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li {
+  position: relative;
+  display: inline;
+  padding-right: 40px;
+  font-size: 14px;
+}
+
+.breadcrumbs li::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  top: 4px;
+  right: 18px;
+  background-color: black;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .current {
+  color: #aba9a7;
+}
+
+.breadcrumbs .current::after {
+  display: none;
+}
+
+.inner-content {
+  margin-bottom: 75px;
+}
+
+.inner-content h2 {
+  margin-top:60px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.big-heading {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.big-heading h2 {
+  display: inline-block;
+  margin: 0;
+  padding: 0 25px;
+  position: relative;
+  z-index: 2;
+  background: url(/images/white-background.jpg);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.big-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -25px;
+  z-index: 1;
+  background-color: black;
+  border-bottom: 1px solid  black;
+}
+
+
+.inner-page-title + .inner-content h2 {
+  margin-top: 0;
+}
+
+.custom-list-1 {
+  margin-top: 14px;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.custom-list-1 li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.custom-list-1 li:last-child {
+  margin: 0;
+}
+
+.custom-list-1 li::before {
+  position: absolute;
+  content:"";
+  background-color: black;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  top: 8px;
+  left: 0;
+}
+
+.inner-content table {
+  border-collapse: collapse;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.prices-table {
+  width: 100%;
+}
+
+.prices-table td{
+  border: 2px solid black;
+  width: 50%;
+  padding: 9px 17px;
+}
+
+.prices-table td:last-child {
+  text-align: center;
+}
+
+.inner-columns {
+  margin: 60px 0;
+  display: flex;
+}
+
+.inner-column-left,
+.inner-column-right {
+  width: 460px;
+}
+
+.inner-columns p {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.short-text {
+  padding-right: 80px;
+}
+
+.inner-page-footer {
+  box-shadow: inset 0px 30px  40px -15px #000;
 }
