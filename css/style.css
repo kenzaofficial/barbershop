@@ -523,10 +523,208 @@ input::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 
+h2+.inner-columns {
+  margin-top: 0;
+}
 .short-text {
   padding-right: 80px;
 }
 
 .inner-page-footer {
   box-shadow: inset 0px 30px  40px -15px #000;
+}
+/* ПРАЙС-ЛИСТ END ------------------*/
+/* MODAL POP-UP INDEX START------------------------*/ 
+
+.modal-content  {
+  position: absolute;
+  top:120px;
+  left: 50%;
+  width: 300px;
+  margin-left: -235px;
+  padding: 50px 80px;
+  color: #000;
+  background:  url(../images/white-background.jpg);
+  box-shadow: 0 30px 50px;
+  box-sizing: content-box;
+}
+
+.modal-content-close {
+  position: absolute;
+  top:0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal-content-close:before,
+.modal-content-close:after {
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 1px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close:after {
+  transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+.modal-content p {
+  margin: 0; 
+  margin-bottom: 14px;
+  font-family: PTSansnarrow, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.modal-content .login-form { 
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 241px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  padding:10px 15px;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: PTSansnarrow,sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  border: 2px solid black;
+}
+
+.login-form input.icon-user {
+  background-image: url(../images/login-form-icon.png);
+  background-repeat:no-repeat;
+  background-position: 270px 15px;
+}
+
+.login-form input.icon-password {
+  background-image: url(../images/login-form-password.png);
+  background-repeat:no-repeat;
+  background-position: 270px 15px;
+}
+
+.login-form span {
+  text-transform: uppercase;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-form a {
+  color: black;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.login-form .restore {
+  float: right;
+  color: #000;
+}
+
+.login-form .btn {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.login-form .btn:hover {
+  background-color: #663d15;
+  cursor: pointer;
+}
+
+
+.login-checkbox {
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding-left: 30px;
+}
+
+.login-checkbox:hover {
+  color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] {
+  display:none;
+}
+
+.login-checkbox .checkbox-indicator {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  left: 0px;
+  top: -2px;
+}
+
+.login-checkbox :checked +.checkbox-indicator::before,/*можно ли обойтись без знака + ? */
+.login-checkbox :checked +.checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  width: 16px;
+  height: 2px;
+  background-color: #000;
+}
+/* 7 лекция 01:26:20 он ставит checked везде я поставил только в верху и у меня все заработало почему так?*/
+.login-checkbox .checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+
+.login-checkbox .checkbox-indicator:after {
+  transform: rotate(-45deg);
+}
+/* MODAL POP-UP INDEX END---------------------------------------------------------*/
+
+.modal-content-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 766px;
+  height: 545px;
+  margin-top: -280px;
+  margin-left: -383px;
+  background: #e9e5dc url(../images/map.png);
+  border: 7px solid white;
+  box-shadow: 0 30px 50px black;
+  z-index: 3;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: (0, 0, 0, 0.5);
+  z-index: 2;
 }
