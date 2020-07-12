@@ -3,6 +3,21 @@
   src: url(../fonts/web/ptsansnarrowbold.woff);
 }
 
+@keyframes bounce {
+  0%   { transform: translateY(-2000px);}
+  50%  { transform: translateY(60px);  }
+  60%  { transform: translateY(-50px); }
+  70%  { transform: translateY(30px);  }
+  90%  { transform: translateY(-10px); }
+  100% { transform: translateY(0);     }
+}
+
+@keyframes shake {
+  0%, 100%                {transform: translateX(0);     }
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-5px); }
+  20%, 40%, 60%, 80%      {transform: translateX(5px);  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -221,7 +236,7 @@ margin-bottom: 55px;
   display: inline-block;
   margin-bottom: 30px;
 }
-.btn {
+.btn, .btn-submit {
   display: inline-block;
   padding: 13px 0;
   width: 140px;
@@ -533,11 +548,12 @@ h2+.inner-columns {
 .inner-page-footer {
   box-shadow: inset 0px 30px  40px -15px #000;
 }
-/* ПРАЙС-ЛИСТ END ------------------*/
-/* MODAL POP-UP INDEX START------------------------*/ 
+/* ----------------------------------ПРАЙС-ЛИСТ END ----------------------------*/
+/* -----------------------------MODAL POP-UP INDEX START------------------------*/ 
 
 .modal-content  {
-  position: absolute;
+  position: fixed;
+  display: none;
   top:120px;
   left: 50%;
   width: 300px;
@@ -547,6 +563,7 @@ h2+.inner-columns {
   background:  url(../images/white-background.jpg);
   box-shadow: 0 30px 50px;
   box-sizing: content-box;
+  z-index: 3;
 }
 
 .modal-content-close {
@@ -637,7 +654,7 @@ h2+.inner-columns {
   border-color: #663d15;
 }
 
-.login-form a {
+.login-form .restore {
   color: black;
   font-size: 14px;
   text-transform: uppercase;
@@ -649,12 +666,12 @@ h2+.inner-columns {
   color: #000;
 }
 
-.login-form .btn {
+.login-form .btn-submit {
   margin-top: 15px;
   width: 100%;
 }
 
-.login-form .btn:hover {
+.login-form .btn-submit:hover {
   background-color: #663d15;
   cursor: pointer;
 }
@@ -685,7 +702,7 @@ h2+.inner-columns {
   top: -2px;
 }
 
-.login-checkbox :checked +.checkbox-indicator::before,/*можно ли обойтись без знака + ? */
+.login-checkbox :checked +.checkbox-indicator::before,
 .login-checkbox :checked +.checkbox-indicator::after {
   content: "";
   position: absolute;
@@ -695,7 +712,7 @@ h2+.inner-columns {
   height: 2px;
   background-color: #000;
 }
-/* 7 лекция 01:26:20 он ставит checked везде я поставил только в верху и у меня все заработало почему так?*/
+
 .login-checkbox .checkbox-indicator::before {
   transform: rotate(45deg);
 }
@@ -703,10 +720,10 @@ h2+.inner-columns {
 .login-checkbox .checkbox-indicator:after {
   transform: rotate(-45deg);
 }
-/* MODAL POP-UP INDEX END---------------------------------------------------------*/
-
+/* --------------------------------------MODAL POP-UP INDEX END-----------------*/
 .modal-content-map {
   position: fixed;
+  display: none;
   top: 50%;
   left: 50%;
   width: 766px;
@@ -719,12 +736,22 @@ h2+.inner-columns {
   z-index: 3;
 }
 
-.modal-overlay {
+  .modal-overlay {
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: (0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 2; 
+} 
+
+.modal-content-show {
+  display: block;
+  animation: bounce 0.9s;
+}
+
+.modal-error {
+  animation: shake 0.8s;
 }
