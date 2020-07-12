@@ -6,6 +6,9 @@ var overlay = document.querySelector(".modal-overlay");
 var form = popup.querySelector("form");
 var login = popup.querySelector(".icon-user");
 var storage = localStorage.getItem("login");
+var map = document.querySelector(".js-open-map");
+var popup_map = document.querySelector(".modal-content-map");
+var map_close = popup_map.querySelector(".modal-content-close");
 
 link.addEventListener("click", function(event) {
     event.preventDefault();
@@ -45,6 +48,24 @@ window.addEventListener ("keydown", function(event) {
         if (popup.classList.contains("modal-content-show")) {
         popup.classList.remove("modal-content-show");
         popup.classList.remove("modal-error");
+        }
+    }
+});
+
+map.addEventListener("click", function(event) {
+    event.preventDefault();
+    popup_map.classList.add("modal-content-show");
+});
+
+map_close.addEventListener("click", function(event) {
+    event.preventDefault();
+    popup_map.classList.remove("modal-content-show");
+});
+
+window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+        if (popup_map.classList.contains("modal-content-show")) {
+            popup_map.classList.remove("modal-content-show");
         }
     }
 });
