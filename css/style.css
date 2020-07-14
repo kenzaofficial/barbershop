@@ -346,6 +346,11 @@ input::-webkit-input-placeholder {
   width: 400px;
 }
 
+.callus_hover:hover {
+  color:#db01a5;
+  transition: 0.5s;
+}
+
 .footer-created-by-text {
   text-align: center;
   text-transform: uppercase;
