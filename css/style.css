@@ -34,9 +34,9 @@ body {
 
 .inner-page {
   color: #000000;
-  background-image: url("../images/barbershop-shop.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
+  background-image: url("../images/white-background.jpg");
+  background-repeat: repeat;
+  
 }
 .inner-page a {
   color: black;
@@ -346,10 +346,6 @@ input::-webkit-input-placeholder {
   width: 400px;
 }
 
-.callus_hover:hover {
-  color:#db01a5;
-  transition: 0.5s;
-}
 .footer-created-by-text {
   text-align: center;
   text-transform: uppercase;
@@ -885,33 +881,32 @@ h2 + .inner-columns {
 }
 
 .price {
+  margin-left: 17px;
+  margin-right: 17px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
   vertical-align: middle;
-  background-color:#e9e5dc;
+  background-color: #e5e5e5;
 }
 
 .price {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 15px;
 }
 
 .price span {
   display: inline-block;
-  padding: 15px 30px;
+  padding-top: 15px; /* я это считал вручную ? как автоматический расположитбь текст по вертикали в этом варианте ??*/
 }
 .price .btn {
-  width: auto;
-  padding: 15px 0;
-  padding-left: 17px;
-  padding-right: 19px;
+  width: 78px;
   float: right;
 }
 
 .pagination {
-  margin-top: 8px;
+  margin-top: 55px;
 }
 .pagination a {
-  display: inline-block;
   margin-right: 3px;
   color: white;
   padding: 12px 18px;
