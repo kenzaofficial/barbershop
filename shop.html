@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="inner-page">
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-navigation">
+                <a class="inner-logo" href="/index.html">
+                    <img src="/images/inner-logo.png" width="111" height="24" alt="Барбершоп"></a>
+                <ul class="main-navigation-ul">
+                    <li><a href="#">Информация</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href=price-list.html>Прайс-лист</a></li>
+                    <li class="active"><a>Магазин</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>  
+<!--END main-navigation-->
+            <button class="login" type="button">                
+                Вход
+            </button>   
+        </div> 
+    </header><!--END main-header-->
+    <main class="container"><!--START main-->
+        <div class="shop-page-title">
+            <h1 class="shop-list-title">средства для ухода</h1>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html">Магазин</a></li>
+                <li class="current">Средства для ухода</li>
+            </ul>
+        </div>
+        <div class="flex-wrapper">
+        <div class="products-list-wrapper">
+            <h2>Производители:</h2>
+            <ul class="checkbox-products">
+                <li><label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox-indicator"></span>
+                    Baxter of California
+                </label></li>
+                <li><label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox-indicator"></span>
+                    Mr Natty
+                </label></li>
+                <li><label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox-indicator"></span>
+                    Suavecito
+                </label></li>
+                <li><label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox-indicator"></span>
+                    Malin+Goetz
+                </label></li>
+                <li><label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox-indicator"></span>
+                    Murray’s
+                </label></li>
+                <li><label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox-indicator"></span>
+                    American Crew
+                </label></li>
+            </ul>  
+            <h2>Группы товаров:</h2>
+            <ul class="radiobutton-products">
+                <li><label class="custom-radio">
+                    <input type="radio" name="group">
+                    <span class="radio-indicator"></span>
+                     Бритвенные Принадлежности</li>
+                <li><label class="custom-radio">
+                    <input type="radio" name="group">
+                    <span class="radio-indicator"></span>
+                    Средства для ухода</li>
+                <li><label class="custom-radio">
+                    <input type="radio" name="group">
+                    <span class="radio-indicator"></span>
+                    Аксессуары</li>
+            </ul>
+            <button class="btn">Показать</button>
+        </div>
+        <div class="shop-block">
+           <div class="shop-content"><img src="/images/travel-california.png" width="220" alt="travel">
+                <div class="content-description">
+                    <p>Набор для путешествий</p>
+                    <h4>«baxter of california»</h4>
+                </div>
+                <div class="price">
+                    <span>2 900 руб.</span>
+                    <button class="btn">Купить</button>
+                </div>
+            </div>
+           <div class="shop-content"><img src="/images/conditioner-california.png" width="220" alt="conditioner-california">
+            <div class="content-description">
+                <p>Увлажняющий кондиционер</p>
+                <h4>«baxter of california»</h4>
+            </div>
+            <div class="price">
+                <span>750 руб.</span>
+                <button class="btn">Купить</button>
+            </div>
+        </div>
+           <div class="shop-content"><img src="/images/gale-suavecito.png" width="220" alt="gale-suavecito">
+            <div class="content-description">
+                <p>Гель для волос</p>
+                <h4>«SUAVECITO»</h4>
+            </div>
+            <div class="price">
+                <span>290 руб.</span>
+                <button class="btn">Купить</button>
+            </div>
+        </div>
+           <div class="shop-content"><img src="/images/gale-american.png" width="220" alt="gale-american">
+            <div class="content-description">
+                <p>Глина для укладки волос</p>
+                <h4>«American crew»</h4>
+            </div>
+            <div class="price">
+                <span>500 руб.</span>
+                <button class="btn">Купить</button>
+            </div>
+        </div>
+        <div class="shop-content">
+               <img src="/images/gale-tube-american.png" width="220" alt="gale-tube-american">
+            <div class="content-description">
+                    <p>Гель для волос</p>
+                    <h4>«American crew»</h4>
+                </div>
+                <div class="price">
+                    <span>300 руб.</span>
+                    <button class="btn">Купить</button>
+                </div>
+            </div>
+           <div class="shop-content"><img src="/images/set-california.png" width="220" alt="set-california">
+            <div class="content-description">
+                <p>Набор для бритья</p>
+                <h4>«baxter of california»</h4>
+            </div>
+            <div class="price">
+                <span>3900 руб.</span>
+                <button class="btn">Купить</button>
+            </div>
+            </div> 
+            <div class="pagination">
+                
+                 <a href="#">1</a>
+                 <a class="active">2</a>
+                 <a href="#">3</a>
+                 <a href="#">4</a>
+            </div>
+        </div><!--SHOP CONTENT END-->
+    </main>
+    <footer class="main-footer inner-page-footer shop-footer" >
+        <div class="container">
+            <section class="footer-contacts">
+                <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+                    АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
+                    <a class="footer-map-link" href="#">КАК НАС НАЙТИ?</a><br>
+                    ТЕЛЕФОН: +38(098)5557205</p>
+            </section>
+            <section class="footer-social">
+                <p class="footer-title">Давайте дружить!</p>
+                <div class="social-buttons-wrap">
+                    <a class="social-button" href="https://vk.com/baronin_yaroslav">
+                        <img src="./images/vk-icon.png" alt="Vkontakte"></a>
+                    <a class="social-button" href="https://vk.com/public132719596">
+                        <img src="./images/fb-icon.png" alt="facebook"></a>
+                    <a class="social-button" href="https://www.instagram.com/baronin_yaroslav/">
+                        <img src="./images/inst-icon.png" alt="instagram"></a>
+                </div>
+            </section>
+            <section class="footer-copyright">
+                <p class="footer-title"> Разработано:</p>
+                <a class="btn" href="https://htmlacademy.ru/">htmlacademy.ru</a>
+            </section>
+        </div>
+    </footer> 
+
+</body>
+</html>
