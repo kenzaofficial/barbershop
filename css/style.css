@@ -34,8 +34,10 @@ body {
 
 .inner-page {
   color: #000000;
-  background-image: url("../images/white-background.jpg");
-  background-repeat: repeat;
+  background-image: url("../images/barbershop-item.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  min-height: 1200px;
   
 }
 .inner-page a {
@@ -939,3 +941,26 @@ h2 + .inner-columns {
 .shop-footer {
   margin-top: 65px;
 }
+/*barbershop-shop end!!!
+
+barbershop  ITEM START!!*/
+
+.inner-columns-item{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  border: 1px solid red;
+}
+
+.inner-column-left-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 480px;
+}
+
+.suka {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
